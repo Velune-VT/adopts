@@ -1,9 +1,10 @@
 :root { --ink:#f9efff; --muted:#c9bbdb; --gold:#deb77a; --gold2:#ffe4af; --green:#7fd19c; }
 * { box-sizing:border-box; }
-html, body { width:100%; min-width:320px; min-height:100%; margin:0; background:transparent !important; }
+html, body { width:100%; min-width:0; min-height:0; margin:0; background:none !important; background-color:transparent !important; }
+html { color-scheme:normal; overflow:hidden; }
 body { color:var(--ink); font-family:Montserrat,sans-serif; }
 button { color:inherit; font:inherit; }
-.shop { position:relative; isolation:isolate; min-height:100vh; overflow:hidden; padding:20px clamp(8px,4vw,42px) 46px; background:transparent; }
+.shop { position:relative; isolation:isolate; min-height:0; overflow:hidden; padding:20px clamp(8px,4vw,42px) 46px; background:none; background-color:transparent; }
 .stars { position:absolute; z-index:-1; inset:0; pointer-events:none; opacity:.65; background-image:radial-gradient(circle,#fff 0 1px,transparent 1.5px),radial-gradient(circle,#d8c1ff 0 1px,transparent 1.5px); background-position:0 0,39px 60px; background-size:103px 103px,137px 137px; mask-image:linear-gradient(#000,transparent 94%); }
 
 .shop-nav { display:flex; justify-content:center; gap:8px; margin:0 auto 26px; }

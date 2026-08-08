@@ -139,3 +139,14 @@ window.addEventListener("resize", () => {
 document.querySelector(".modal-close").addEventListener("click", () => modal.close());
 modal.addEventListener("click", (event) => { if (event.target === modal) modal.close(); });
 renderShelf();
+
+/* Keeps a cross-origin Carrd iframe fitted to this transparent shop. */
+function reportAdoptHeight() {
+  const height = Math.ceil(document.querySelector(".shop").getBoundingClientRect().height);
+  window.parent.postMessage({ type: "velune-adopts-height", height }, "*");
+}
+
+new ResizeObserver(reportAdoptHeight).observe(document.querySelector(".shop"));
+window.addEventListener("load", reportAdoptHeight);
+window.addEventListener("resize", reportAdoptHeight);
+setTimeout(reportAdoptHeight, 150);
