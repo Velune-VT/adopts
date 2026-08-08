@@ -13,10 +13,16 @@
     <main class="shop">
       <div class="stars" aria-hidden="true"></div>
 
-      <nav class="shop-nav" aria-label="Shop views">
-        <button class="nav-button selected" data-view="available">Available Adopts</button>
-        <button class="nav-button" data-view="archive">Found-a-Home Archive</button>
+      <nav class="shop-nav" aria-label="Adopt collections">
+        <button class="nav-button selected" data-view="celestial" aria-pressed="true"><span>✦</span> Celestial Reverie</button>
+        <button class="nav-button" data-view="garden" aria-pressed="false"><span>✿</span> Enchanted Garden</button>
+        <button class="nav-button" data-view="sugar" aria-pressed="false"><span>◇</span> Sugar Carousel</button>
       </nav>
+
+      <header class="collection-heading" aria-live="polite">
+        <span class="collection-symbol" id="collectionSymbol" aria-hidden="true">✦</span>
+        <div><h1 id="collectionTitle">Celestial Reverie</h1><p id="collectionCopy">Moonlit designs gathered from dreams, constellations, and distant skies.</p></div>
+      </header>
 
       <section class="shelf" id="shelf" aria-live="polite"></section>
       <p class="shelf-hint" id="shelfHint">Select a hanging charm to see its full details.</p>
