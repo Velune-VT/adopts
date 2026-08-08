@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <title>Velune Star Charm Adopt Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="shop">
+      <div class="stars" aria-hidden="true"></div>
+
+      <nav class="shop-nav" aria-label="Shop views">
+        <button class="nav-button selected" data-view="available">Available Adopts</button>
+        <button class="nav-button" data-view="archive">Found-a-Home Archive</button>
+      </nav>
+
+      <section class="shelf" id="shelf" aria-live="polite"></section>
+      <p class="shelf-hint" id="shelfHint">Select a hanging charm to see its full details.</p>
+
+      <section class="detail-space" id="detailSpace" aria-live="polite">
+        <div class="empty-detail"><span>✦</span><p>A character’s star charm will appear here.</p></div>
+      </section>
+
+      <dialog id="modal">
+        <button class="modal-close" aria-label="Close">×</button>
+        <div id="modalContent"></div>
+      </dialog>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
