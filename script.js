@@ -96,9 +96,13 @@ function selectAdopt(adopt) {
     <div class="reveal-chain" aria-hidden="true"><i></i></div>
     <article class="detail-plaque" style="--a:${adopt.colors[0]};--b:${adopt.colors[1]}">
       <div class="plaque-stars" aria-hidden="true">✦　·　✧</div>
+      <span class="plaque-orbit" aria-hidden="true"></span>
       <div class="portrait-charm">
-        <span class="charm-bow" aria-hidden="true"></span>
-        <div class="star-portrait" style="${portraitStyle}">${adopt.image ? "" : "<span class='placeholder-person'>✦</span>"}</div>
+        <span class="charm-bow" aria-hidden="true"><i></i></span>
+        <div class="star-portrait">
+          <div class="star-portrait-art" style="${portraitStyle}">${adopt.image ? "" : "<span class='placeholder-person'>✦</span>"}</div>
+        </div>
+        <span class="star-gems" aria-hidden="true"><i></i><b></b></span>
         <span class="mini-charm" aria-hidden="true"><i></i>✦</span>
       </div>
       <div class="detail-copy">
@@ -115,7 +119,7 @@ function selectAdopt(adopt) {
           <button class='claim'>✦ Claim this star ✦</button>
         </div>
       </div>
-      <button class="close-charm" type="button" aria-label="Close details">↑</button>
+      <button class="close-charm" type="button" aria-label="Close details and return to the top">↑</button>
     </article>`;
   details.querySelector(".close-charm").addEventListener("click", closeDetails);
   const claim = details.querySelector(".claim");
@@ -131,7 +135,7 @@ function closeDetails() {
   selected = null;
   renderShelf();
   details.innerHTML = emptyDetails();
-  shelf.scrollIntoView({ behavior:"smooth", block:"center" });
+  document.querySelector(".shop-nav").scrollIntoView({ behavior:"smooth", block:"start" });
 }
 
 function openCheckout(adopt) {
